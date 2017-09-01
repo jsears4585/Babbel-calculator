@@ -5,20 +5,19 @@ export default function inputReducer(
   state={
     output: '',
     previous: '',
-    currentOp: ''
+    currentOp: '',
+    memory: ''
   }, action )
 {
-  console.log(action.type)
+
   switch(action.type) {
 
     case 'UPDATE_OUTPUT':
-      console.log("Update output:", state.output)
       return Object.assign({}, state, {
         output: utils.toExp(state.output += action.payload)
       })
 
     case 'USE_OPERATION':
-      console.log("Operation:", action.payload)
       return Object.assign({}, state, {
         output: '',
         previous: state.output,
@@ -31,6 +30,24 @@ export default function inputReducer(
         output: utils.toExp(answer),
         previous: '',
         currentOp: ''
+      })
+
+    case 'CLEAR':
+      return Object.assign({}, state, {
+        output: '',
+        previous: '',
+        currentOp: ''
+      })
+
+    case 'MEM_STORE':
+      return Object.assign({}, state, {
+        memory: state.output,
+        output: ''
+      })
+
+    case 'MEM_RET':
+      return Object.assign({}, state, {
+        output: state.output += state.memory
       })
 
     default:
