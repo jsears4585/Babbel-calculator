@@ -25,7 +25,8 @@ export default function inputReducer(
       })
 
     case 'EQUALS':
-      let answer = eval(state.previous + state.currentOp + state.output)
+      // eslint-disable-next-line
+      let answer = eval(state.previous + state.currentOp + state.output) || 0
       return Object.assign({}, state, {
         output: utils.toExp(answer),
         previous: '',
@@ -47,7 +48,7 @@ export default function inputReducer(
 
     case 'MEM_RET':
       return Object.assign({}, state, {
-        output: state.output += state.memory
+        output: state.memory
       })
 
     default:

@@ -1,5 +1,5 @@
-describe('Basic sanity check', () => {
-  it('knows that 2 and 2 equals 4', () => {
+describe('Application', () => {
+  it('knows how to run a test in general', () => {
     expect(2 + 2).toBe(4)
   })
 })
