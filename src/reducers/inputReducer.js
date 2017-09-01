@@ -25,8 +25,7 @@ export default function inputReducer(
       })
 
     case 'EQUALS':
-      // eslint-disable-next-line
-      let answer = eval(state.previous + state.currentOp + state.output) || 0
+      let answer = utils.findAnswer(state.previous, state.currentOp, state.output) || 0
       return Object.assign({}, state, {
         output: utils.toExp(answer),
         previous: '',
