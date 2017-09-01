@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #ececec;
+  background: #ff8d15;
 }
 
 input:focus,
@@ -36,7 +36,7 @@ button:focus {
   padding: 10px;
   background: #cdcdcd;
   border-radius: 8px;
-  box-shadow: 3px 4px grey;
+  box-shadow: 3px 4px #393934;
 }
 
 #Display {
@@ -45,11 +45,14 @@ button:focus {
   height: 48px;
   margin: 5px auto;
   background: #dadada;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #MemoryPad {
   width: 194px;
-  margin: 10px auto 0px;
+  margin: 62px auto 0px;
 }
 
 #NumberPad {

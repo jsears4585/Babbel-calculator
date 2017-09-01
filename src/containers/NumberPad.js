@@ -40,7 +40,7 @@ class NumberPad extends Component {
           <Button value={ 4 } func={ this.updateOutput } />
           <Button value={ 5 } func={ this.updateOutput } />
           <Button value={ 6 } func={ this.updateOutput } />
-          <Button value={ 'x' } func={ this.useOperation } /><br />
+          <Button value={ '*' } func={ this.useOperation } /><br />
 
           <Button value={ 1 } func={ this.updateOutput } />
           <Button value={ 2 } func={ this.updateOutput } />
