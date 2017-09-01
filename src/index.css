@@ -21,8 +21,13 @@ button:focus {
   cursor: pointer;
 }
 
-.eq {
-  background: #cdcdcd;
+#output {
+  width: 160px;
+  position: absolute;
+  top: 12px;
+  right: 9px;
+  font-size: 30px;
+  text-align: right;
 }
 
 #App {
@@ -35,6 +40,7 @@ button:focus {
 }
 
 #Display {
+  position: absolute;
   width: 198px;
   height: 48px;
   margin: 5px auto;
