@@ -14,7 +14,7 @@ export default function inputReducer(
 
     case 'UPDATE_OUTPUT':
       return Object.assign({}, state, {
-        output: utils.toExp(state.output += action.payload)
+        output: state.output += action.payload
       })
 
     case 'USE_OPERATION':
