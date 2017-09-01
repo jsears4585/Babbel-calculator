@@ -3,10 +3,15 @@ import React, { Component } from 'react'
 import Button from '../components/Button'
 
 class MemoryPad extends Component {
+  logValue = value => {
+    console.log(value)
+  }
+
   render() {
     return (
       <div id="MemoryPad">
-        Memory Pad
+        <Button value={ 'MS' } func={ this.logValue } />
+        <Button value={ 'MR' } func={ this.logValue } />
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Input from '../components/Input'
+import Display from '../components/Display'
 import NumberPad from './NumberPad'
 import MemoryPad from './MemoryPad'
 
@@ -8,9 +8,9 @@ class App extends Component {
   render() {
     return (
       <div id="App">
-        <Input />
-        <NumberPad />
+        <Display />
         <MemoryPad />
+        <NumberPad />
       </div>
     )
   }
